@@ -23,7 +23,7 @@ public class Library {
 
         Book bFarm = new Book("9780141036137", "Animal Farm", "George Orwell", 1945, false);
         BD.create(bFarm);*/
-        /*Book b1984 = BD.get(6);
+        Book b1984 = BD.get(6);
         Book bGatsby = BD.get(7);
         Book bCatcher = BD.get(8);
         Book bCar = BD.get(9);
@@ -31,7 +31,7 @@ public class Library {
         System.out.println(bFarm.toString());
 
         File p1984 = new File("src/main/resources/nineteeneightyfour.jpg");
-        File pAnimalFarm = new File("L:\\Programacion\\2023\\APIExercises\\LibraryDB\\src\\main\\resources\\AnimalFarm.jpg");
+        File pAnimalFarm = new File("src/main/resources/AnimalFarm.jpg");
         File pHowToBuildACar = new File("src/main/resources/HowToBuildACar.jpg");
         File pTheGreatGatsby = new File("src/main/resources/TheGreatGatsby.jpg");
         File pCatcherInTheRye = new File("src/main/resources/CatcherInTheRye.jpg");
@@ -41,11 +41,11 @@ public class Library {
         BD.insertFoto(bGatsby,pTheGreatGatsby);
         BD.insertFoto(bCatcher,pCatcherInTheRye);
         BD.insertFoto(bCar,pHowToBuildACar);
-        BD.insertFoto(bFarm,pAnimalFarm);*/
+        BD.insertFoto(bFarm,pAnimalFarm);
 
 
-        File picture = new File("L:\\Programacion\\2023\\APIExercises\\LibraryDB\\src\\main\\resources\\picture.jpg");
-        BD.saveFoto(7,picture);
+        File picture = new File("src/main/resources/picture.jpg");
+        BD.saveFoto(8,picture);
 
 
 

@@ -2,7 +2,7 @@ import java.sql.*;
 
 public class ConnectionLibrary {
 
-    public static final String URL = "jdbc:h2:L:\\Programacion\\2023\\LibraryDB\\src\\main\\resources\\DB\\library.mv.db"
+    public static final String URL = "jdbc:h2:L:\\Programacion\\2023\\LibraryDB\\src\\main\\resources\\DB\\library"
             + ";DB_CLOSE_ON_EXIT=TRUE;FILE_LOCK=NO";
 
     public static final String DRIVER = "org.h2.Driver";
