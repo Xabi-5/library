@@ -68,6 +68,7 @@ public class BookDAO {
                     ps.setInt(4,book.getYear());
                     ps.setBoolean(5,book.isAvailable());
                     ps.setInt(6,book.getIdBook());
+                    ps.setInt(7,book.getIdBook());
                     ps.executeUpdate();
 
                     //Esta parte asigna o ID
@@ -151,6 +152,35 @@ public class BookDAO {
 
             }
 
+        }catch (SQLException ex){
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    public void updateCover(Book book, File f){
+        try{
+            if(con != null && !con.isClosed()) {
+                try (PreparedStatement ps = con.prepareStatement("UPDATE" +
+                        " BOOK SET ISBN=?, TITLE=?, AUTHOR=?, ANO=?, AVAILABLE=? WHERE" +
+                        " IDBOOK=?");) {
+
+                    ps.setString(1,book.getIsbn());
+                    ps.setString(2,book.getTitle());
+                    ps.setString(3,book.getAuthor());
+                    ps.setInt(4,book.getYear());
+                    ps.setBoolean(5,book.isAvailable());
+                    ps.setInt(6,book.getIdBook());
+                    ps.setInt(7,book.getIdBook());
+                    ps.executeUpdate();
+
+                    //Esta parte asigna o ID
+                    ResultSet rs = ps.getGeneratedKeys();
+                    if(rs.next()){
+                        int idBook = rs.getInt(1);
+                        book.setIdBook(idBook);
+                    }
+                }
+            }
         }catch (SQLException ex){
             System.out.println(ex.getMessage());
         }

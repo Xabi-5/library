@@ -22,7 +22,7 @@ public class Library {
         BD.create(bCar);
 
         Book bFarm = new Book("9780141036137", "Animal Farm", "George Orwell", 1945, false);
-        BD.create(bFarm);*/
+        BD.create(bFarm);
         Book b1984 = BD.get(6);
         Book bGatsby = BD.get(7);
         Book bCatcher = BD.get(8);
@@ -41,11 +41,26 @@ public class Library {
         BD.insertFoto(bGatsby,pTheGreatGatsby);
         BD.insertFoto(bCatcher,pCatcherInTheRye);
         BD.insertFoto(bCar,pHowToBuildACar);
-        BD.insertFoto(bFarm,pAnimalFarm);
+        BD.insertFoto(bFarm,pAnimalFarm);*/
 
+        /*Book bGaliza = new Book("9788482887296", "Sempre en Galiza", "Castelao", 1944, true, 1);
+        BD.create(bGaliza);
+        File pGaliza = new File("src/main/resources/galiza.jpg");
+        BD.insertFoto(bGaliza,pGaliza);
 
-        File picture = new File("src/main/resources/picture.jpg");
-        BD.saveFoto(8,picture);
+        Book bWild = new Book(" 978151239582", "The Call of the Wild", "Jack London", 1903, true, 2);
+        BD.create(bWild);
+        File pWild = new File("src/main/resources/wild.jpg");
+        BD.insertFoto(bWild,pWild);
+
+        Book bTom = new Book("9781503215672", "Tom Sawyer", "Mark Twain", 1876, true, 3);
+        BD.create(bTom);
+        File pTom = new File("src/main/resources/sawyer.jpg");
+        BD.insertFoto(bTom,pTom);*/
+        BD.delete(8);
+        BD.delete(14);
+        BD.delete(16);
+
 
 
 
